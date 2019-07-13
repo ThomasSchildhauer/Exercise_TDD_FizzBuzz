@@ -10,6 +10,19 @@ namespace Exercise_TDD_FizzBuzz
     {
         static void Main(string[] args)
         {
+            FizzBuzz fizzBuzz = new FizzBuzz();
+
+            Console.WriteLine("Input a number");
+
+            var number = Console.ReadLine();
+
+            int.TryParse(number, out int inputNumber);
+
+            var actual = fizzBuzz.DetermineFizzBuzz(inputNumber);
+
+            Console.WriteLine($"The Result is: {actual}");
+
+            Console.ReadKey();
         }
     }
 }
